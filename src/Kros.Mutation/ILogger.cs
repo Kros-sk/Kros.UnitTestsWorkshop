@@ -1,6 +1,6 @@
-// namespace Kros.Mutation;
+namespace Kros.Mutation;
 
-// public interface ILogger
-// {
-//     void Log(string message);
-// }
+public interface ILogger
+{
+    void Log(string message);
+}
