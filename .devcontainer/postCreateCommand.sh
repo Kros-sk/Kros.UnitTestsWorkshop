@@ -1,2 +1,2 @@
-dotnet restore
-dotnet tool restore
+dotnet restore;
+dotnet tool restore;
