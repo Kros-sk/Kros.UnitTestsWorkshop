@@ -1,5 +1,3 @@
-using FluentAssertions;
-
 namespace Kros.Mutation.Tests;
 
 public class CalculatorShould
