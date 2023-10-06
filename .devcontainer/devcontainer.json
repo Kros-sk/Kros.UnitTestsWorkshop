@@ -11,10 +11,11 @@
 				"ms-dotnettools.csharp",
 				"vsls-contrib.codetour",
 				"formulahendry.dotnet-test-explorer",
-				"ryanluker.vscode-coverage-gutters"
+				"ryanluker.vscode-coverage-gutters",
+				"searKing.preview-vscode"
 			]
 		}
-	}
+	},
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
@@ -28,7 +29,7 @@
 	// }
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "dotnet restore",
+	"postCreateCommand": "dotnet restore; dotnet tool restore"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
