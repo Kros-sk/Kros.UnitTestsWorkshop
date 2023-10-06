@@ -29,7 +29,7 @@
 	// }
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "dotnet restore && dotnet tool restore"
+	"postCreateCommand": "./.devcontainer/postCreateCommand.sh"
 
 	// Configure tool-specific properties.
 	// "customizations": {},
