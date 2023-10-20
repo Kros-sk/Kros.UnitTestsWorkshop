@@ -1,5 +1,3 @@
-using Kros.UnitTestsWorkshop.EShop;
-
 namespace Kros.UnitTestsWorkshop.Tests.EShop;
 
 public class OrderPdfGeneratorShould
@@ -9,7 +7,7 @@ public class OrderPdfGeneratorShould
     // {
     //     var order = CreateOrder();
     //     var generator = new OrderPdfGenerator();
-    //     var pdf = generator.Generate(order);
+    //     IDocument pdf = generator.Generate(order);
     // }
 
     // private static Order CreateOrder()
