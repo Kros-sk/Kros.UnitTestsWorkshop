@@ -1,10 +1,10 @@
-using QuestPDF.Fluent;
+using QuestPDF.Infrastructure;
 
 namespace Kros.UnitTestsWorkshop.EShop;
 
 public class OrderPdfGenerator
 {
-    public byte[] Generate(Order order)
+    public IDocument Generate(Order order)
     {
         var report = new OrderReport(new OrderReportModel
         {
@@ -12,6 +12,6 @@ public class OrderPdfGenerator
             Order = order
         });
 
-        return report.GeneratePdf();
+        return report;
     }
 }
