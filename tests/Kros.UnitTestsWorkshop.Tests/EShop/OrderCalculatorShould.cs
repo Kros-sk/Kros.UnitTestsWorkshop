@@ -1,6 +1,6 @@
 using Kros.UnitTestsWorkshop.EShop;
 
-namespace KRos.UnitTestsWorkshop.Tests.EShop;
+namespace Kros.UnitTestsWorkshop.Tests.EShop;
 
 public class OrderCalculatorShould
 {
