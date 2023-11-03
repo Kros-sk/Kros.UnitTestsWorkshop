@@ -1,12 +1,12 @@
-//using Kros.UnitTestsWorkshop.EShop;
-//using QuestPDF.Infrastructure;
-//using System.Runtime.CompilerServices;
+// using Kros.UnitTestsWorkshop.EShop;
+// using QuestPDF.Infrastructure;
+// using System.Runtime.CompilerServices;
 
-//namespace Kros.UnitTestsWorkshop.Tests.EShop;
+// namespace Kros.UnitTestsWorkshop.Tests.EShop;
 
-//[UsesVerify]
-//public class OrderPdfGeneratorShould
-//{
+// [UsesVerify]
+// public class OrderPdfGeneratorShould
+// {
 //    [ModuleInitializer]
 //    internal static void Init()
 //    {
@@ -20,7 +20,7 @@
 //        var generator = new OrderPdfGenerator();
 //        IDocument pdf = generator.Generate(order);
 
-//        // ???
+//        return Verify(pdf);
 //    }
 
 //    private static Order CreateOrder()
@@ -71,4 +71,4 @@
 
 //        return order;
 //    }
-//}
+// }
