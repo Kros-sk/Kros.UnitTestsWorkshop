@@ -12,7 +12,7 @@ public class Cart
 
     public void AddItem(string product, decimal price, int quantity = 1)
     {
-        var existingItem = _items.FirstOrDefault(item => item.Product == product);
+        var existingItem = GetItem(product);
         if (existingItem != null)
         {
             existingItem.Quantity += quantity;
@@ -25,6 +25,9 @@ public class Cart
         _totalPrice += price * quantity;
     }
 
+    public Item? GetItem(string product)
+        => _items.FirstOrDefault(item => item.Product == product);
+
     public void RemoveItem(string product)
     {
         _items.RemoveAll(item => item.Product == product);
@@ -32,7 +35,7 @@ public class Cart
 
     public decimal GetTotal() => _totalPrice;
 
-    private class Item
+    public class Item
     {
         public string Product { get; }
         public decimal Price { get; }
