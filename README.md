@@ -11,4 +11,4 @@
 - [ ] [FluentAssertions](https://fluentassertions.com/)
 - [ ] [NSubstitute](https://nsubstitute.github.io/)
 - [ ] [Squadron.SqlServer - Ako testovať integráciu s databázou?](https://swisslife-oss.github.io/squadron/docs/sqlserver)
-- [ ] [WireMock.Net - Ako testovať kód závislý od externého API?](https://github.com/WireMock-Net/WireMock.Net)
+- [x] [WireMock.Net - Ako testovať kód závislý od externého API?](https://github.com/WireMock-Net/WireMock.Net)
