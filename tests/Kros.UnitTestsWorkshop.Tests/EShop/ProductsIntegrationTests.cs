@@ -8,18 +8,18 @@ namespace Kros.UnitTestsWorkshop.Tests.EShop
 {
     public class ProductsIntegrationTests : IClassFixture<AppFactory>
     {
-        //private readonly AppFactory _factory;
-        //private readonly WireMockServer _wireMockServer;
+        // private readonly AppFactory _factory;
+        // private readonly WireMockServer _wireMockServer;
 
-        //public ProductsIntegrationTests(AppFactory factory)
-        //{
+        // public ProductsIntegrationTests(AppFactory factory)
+        // {
         //    _factory = factory;
         //    _wireMockServer = factory.Services.GetRequiredService<WireMockServer>();
-        //}
+        // }
 
-        //[Fact]
-        //public async Task CreateNewProduct()
-        //{
+        // [Fact]
+        // public async Task CreateNewProduct()
+        // {
         //    Product product = new()
         //    {
         //        Name = "Test product",
@@ -49,15 +49,15 @@ namespace Kros.UnitTestsWorkshop.Tests.EShop
         //    result.PriceGbp.Should().Be(8);
         //    result.PricePln.Should().Be(45);
         //    result.PriceUsd.Should().Be(12);
-        //}
+        // }
 
-        //[Theory]
-        //[InlineData("EUR", "USD", 1.2)]
-        //[InlineData("EUR", "GBP", 0.8)]
-        //[InlineData("EUR", "CZK", 25)]
-        //[InlineData("EUR", "PLN", 4.5)]
-        //public async Task RecalculatePrice(string baseCurrency, string targetCurrency, decimal exchangeRate)
-        //{
+        // [Theory]
+        // [InlineData("EUR", "USD", 1.4)]
+        // [InlineData("EUR", "GBP", 0.9)]
+        // [InlineData("EUR", "CZK", 24)]
+        // [InlineData("EUR", "PLN", 4.7)]
+        // public async Task RecalculatePrice(string baseCurrency, string targetCurrency, decimal exchangeRate)
+        // {
         //    // configure WireMockServer
         //    // ..
 
@@ -68,6 +68,6 @@ namespace Kros.UnitTestsWorkshop.Tests.EShop
         //    var result = await response.Content.ReadFromJsonAsync<decimal>();
 
         //    result.Should().Be(exchangeRate * 100);
-        //}
+        // }
     }
 }
