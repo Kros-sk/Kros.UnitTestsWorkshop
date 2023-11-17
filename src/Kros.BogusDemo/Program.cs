@@ -1,4 +1,6 @@
-﻿using Bogus;
+﻿using AutoBogus;
+using AutoBogus.Conventions;
+using Bogus;
 using Kros.UnitTestsWorkshop.EShop;
 using System.Text.Encodings.Web;
 using System.Text.Json;
@@ -49,7 +51,20 @@ var orderFaker = new Faker<Order>(locale)
     .RuleFor(o => o.TotalPriceWithVat, (f, o) => o.Items.Sum(oi => oi.TotalPriceWithVat))
     ;
 
-orderFaker.Generate(1)
-    .ForEach(item => Console.WriteLine(JsonSerializer.Serialize(item, jsonOptions)));
+//orderFaker.Generate(1)
+//    .ForEach(item => Console.WriteLine(JsonSerializer.Serialize(item, jsonOptions)));
 
 #endregion Faker
+
+AutoFaker.Configure(builder =>
+{
+    builder
+        .WithLocale(locale)
+        .WithConventions(cfg =>
+        {
+            cfg.Prefix.Aliases("TitleBeforeName");
+        });
+});
+
+AutoFaker.Generate<Client>(5)
+    .ForEach(item => Console.WriteLine(JsonSerializer.Serialize(item, jsonOptions)));
