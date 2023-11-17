@@ -1,40 +1,48 @@
-using System;
-using TechTalk.SpecFlow;
+using Kros.UnitTestsWorkshop.EShop;
 
 namespace Eshop
 {
     [Binding]
     public class EshopSearchingSteps
     {
-        private readonly ScenarioContext _scenarioContext;
+        private Catalog _catalog;
+        private Catalog.Product? _searchedProduct;
 
-        public EshopSearchingSteps(ScenarioContext scenarioContext)
+        public EshopSearchingSteps(Catalog catalog)
         {
-            _scenarioContext = scenarioContext;
+            _catalog = catalog;
         }
 
         [Given(@"the following products")]
         public void GivenTheFollowingProducts(Table givenProducts)
         {
-            // _scenarioContext.Pending();
+            AddProducts(givenProducts);
         }
 
         [When(@"I search for ""(.*)""")]
-        public void WhenIsearchfor(string args1)
+        public void WhenISearchFor(string productName)
         {
-            // _scenarioContext.Pending();
+            _searchedProduct = _catalog.GetProduct(productName);
         }
 
         [Then(@"I should see ""(.*)"" in the search results")]
-        public void ThenIshouldseeinthesearchresults(string args1)
+        public void ThenIShouldGetIt(string productName)
         {
-            // _scenarioContext.Pending();
+            _searchedProduct!.Name.Should().Be(productName);
         }
-        
+
         [Then(@"this product should cost ""(.*)""")]
-        public void Thenthisproductshouldcost(decimal args1)
+        public void ThenProductShouldCost(decimal price)
         {
-            // _scenarioContext.Pending();
+            _searchedProduct!.Price.Should().Be(price);
+        }
+
+        private void AddProducts(Table givenProducts)
+        {
+            foreach (var row in givenProducts.Rows)
+            {
+                _catalog.AddProduct(row["name"], decimal.Parse(row["price"]));
+            }
         }
 
     }
