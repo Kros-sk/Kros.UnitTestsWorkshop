@@ -2,6 +2,8 @@ namespace Kros.UnitTestsWorkshop.EShop;
 
 public class Client
 {
+    public string? TitleBeforeName { get; set; }
+
     public string FirstName { get; set; } = null!;
 
     public string LastName { get; set; } = null!;
