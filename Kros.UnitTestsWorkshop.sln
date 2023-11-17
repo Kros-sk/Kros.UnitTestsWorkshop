@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kros.Mutation.Tests", "test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kros.EShop.API", "src\Kros.EShop.API\Kros.EShop.API.csproj", "{C07E2C07-35F7-455A-8D8B-8E67C5873B80}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kros.UnitTestsWorkshop.Gherkin.Tests", "tests\Kros.UnitTestsWorkshop.Gherkin.Tests\Kros.UnitTestsWorkshop.Gherkin.Tests.csproj", "{534A6132-7259-4615-B4D9-8459C4F8F56A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +45,10 @@ Global
 		{C07E2C07-35F7-455A-8D8B-8E67C5873B80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C07E2C07-35F7-455A-8D8B-8E67C5873B80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C07E2C07-35F7-455A-8D8B-8E67C5873B80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{534A6132-7259-4615-B4D9-8459C4F8F56A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534A6132-7259-4615-B4D9-8459C4F8F56A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534A6132-7259-4615-B4D9-8459C4F8F56A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534A6132-7259-4615-B4D9-8459C4F8F56A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -53,6 +59,7 @@ Global
 		{3AAFA6DA-88AD-425B-9D98-0DF5DA0B2C7E} = {BF9C5B63-5D66-4C06-872B-10CAEC4479ED}
 		{DC465B43-01C7-4D23-8D9E-AE15905FE6E1} = {398C63EE-6A82-41CC-A97A-9F08137470C7}
 		{C07E2C07-35F7-455A-8D8B-8E67C5873B80} = {BF9C5B63-5D66-4C06-872B-10CAEC4479ED}
+		{534A6132-7259-4615-B4D9-8459C4F8F56A} = {398C63EE-6A82-41CC-A97A-9F08137470C7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D663B89E-109A-49FB-9647-5D3A3F19E527}
