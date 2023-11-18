@@ -13,7 +13,7 @@ public class AppFactory : WebApplicationFactory<Program>
         var wireMockServer = WireMockServer.Start();
         builder.ConfigureAppConfiguration((context, config) =>
         {
-            config.AddInMemoryCollection(new KeyValuePair<string, string>[]
+            config.AddInMemoryCollection(new KeyValuePair<string, string?>[]
             {
                 new("FreecurrencyApi:ApiKey", "test"),
                 new("FreecurrencyApi:BaseUrl", wireMockServer.Urls[0])

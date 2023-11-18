@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Options;
+﻿using Kros.UnitTestsWorkshop.EShop;
+using Microsoft.Extensions.Options;
 using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ApiKeyHandler>();
+builder.Services.AddSingleton<IClientRepository, ClientRepository>();
 builder.Services.AddRefitClient<IFreecurrencyApi>()
     .ConfigureHttpClient((f, c) =>
     {
@@ -39,6 +41,18 @@ app.MapGet("/recalculate/{baseCurrency}/{targetCurrency}",
 
         return price * rates.Data[targetCurrency];
     });
+
+app.MapGet("/api/clients", (IClientRepository repository) => repository.GetAll());
+app.MapGet("/api/clients/{id}", (Guid id, IClientRepository repository) =>
+{
+    var client = repository.GetById(id);
+    return client is null ? Results.NotFound() : Results.Ok(client);
+});
+app.MapPost("/api/clients", (Client client, IClientRepository repository) =>
+{
+    Guid id = repository.Save(client);
+    return Results.Created($"/api/clients/{id}", id);
+});
 
 app.Run();
 
