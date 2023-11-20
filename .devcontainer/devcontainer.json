@@ -12,7 +12,9 @@
 				"vsls-contrib.codetour",
 				"formulahendry.dotnet-test-explorer",
 				"ryanluker.vscode-coverage-gutters",
-				"searKing.preview-vscode"
+				"searKing.preview-vscode",
+				"amillard98.specflow-tools",
+				"RajUppadhyay.specflow-steps-definition-generator"
 			]
 		}
 	},
