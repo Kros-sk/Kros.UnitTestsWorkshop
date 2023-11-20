@@ -1,12 +1,13 @@
-// using Kros.UnitTestsWorkshop.EShop;
-// using QuestPDF.Infrastructure;
-// using System.Runtime.CompilerServices;
+//using Kros.UnitTestsWorkshop.EShop;
+//using Kros.Utils;
+//using QuestPDF.Infrastructure;
+//using System.Runtime.CompilerServices;
 
-// namespace Kros.UnitTestsWorkshop.Tests.EShop;
+//namespace Kros.UnitTestsWorkshop.Tests.EShop;
 
-// [UsesVerify]
-// public class OrderPdfGeneratorShould
-// {
+//[UsesVerify]
+//public class OrderPdfGeneratorShould
+//{
 //    [ModuleInitializer]
 //    internal static void Init()
 //    {
@@ -58,8 +59,8 @@
 //        {
 //            Number = "ORD123456",
 //            Client = client,
-//            OrderDate = DateTime.Now,
-//            EstimatedDeliveryDate = DateTime.Now.AddDays(5),
+//            OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now),
+//            EstimatedDeliveryDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(5)),
 //            PaymentMethod = "Credit Card",
 //            Items = orderItems,
 //            Discount = 0,
@@ -71,4 +72,4 @@
 
 //        return order;
 //    }
-// }
+//}

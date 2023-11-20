@@ -5,7 +5,7 @@ namespace Kros.UnitTestsWorkshop.EShop;
 
 public class OrderCsvExporter
 {
-    public async Task<Stream> ExportOrders(IOrderRepository repository, DateTime fromDate, DateTime toDate)
+    public async Task<Stream> ExportOrders(IOrderRepository repository, DateOnly fromDate, DateOnly toDate)
     {
         var orders = repository.GetOrders(fromDate, toDate);
 

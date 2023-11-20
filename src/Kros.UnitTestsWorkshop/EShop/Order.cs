@@ -6,9 +6,9 @@ public class Order
 
     public Client? Client { get; set; }
 
-    public DateTime? OrderDate { get; set; }
+    public DateOnly? OrderDate { get; set; }
 
-    public DateTime? EstimatedDeliveryDate { get; set; }
+    public DateOnly? EstimatedDeliveryDate { get; set; }
 
     public string? PaymentMethod { get; set; }
 
