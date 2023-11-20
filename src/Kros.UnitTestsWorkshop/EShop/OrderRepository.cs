@@ -1,8 +1,10 @@
+using Kros.Utils;
+
 namespace Kros.UnitTestsWorkshop.EShop;
 
 public class OrderRepository : IOrderRepository
 {
-    public IEnumerable<Order> GetOrders(DateTime fromDate, DateTime toDate)
+    public IEnumerable<Order> GetOrders(DateOnly fromDate, DateOnly toDate)
     {
         var sampleOrders = GenerateSampleOrders();
         return sampleOrders.Where(o => o.OrderDate.HasValue && o.OrderDate >= fromDate && o.OrderDate <= toDate);
@@ -21,8 +23,8 @@ public class OrderRepository : IOrderRepository
                     Email = "martin.novak@email.com",
                     Address = "Námestie Slobody 1, Bratislava"
                 },
-                OrderDate = DateTime.Now.AddDays(-45),
-                EstimatedDeliveryDate = DateTime.Now.AddDays(-30),
+                OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(-45)),
+                EstimatedDeliveryDate = DateOnly.FromDateTime(DateTime.Now.AddDays(-30)),
                 PaymentMethod = "Credit Card",
                 Items = new List<OrderItem>
             {
@@ -60,8 +62,8 @@ public class OrderRepository : IOrderRepository
                     Email = "eva.horakova@email.com",
                     Address = "Hlavná 24, Košice"
                 },
-                OrderDate = DateTime.Now.AddDays(-15),
-                EstimatedDeliveryDate = DateTime.Now.AddDays(5),
+                OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(-15)),
+                EstimatedDeliveryDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(5)),
                 PaymentMethod = "Bank Transfer",
                 Items = new List<OrderItem>
             {
@@ -90,8 +92,8 @@ public class OrderRepository : IOrderRepository
                     Email = "peter.varga@email.com",
                     Address = "Lesna 3, Trencin"
                 },
-                OrderDate = DateTime.Now.AddDays(-10),
-                EstimatedDeliveryDate = DateTime.Now.AddDays(10),
+                OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(-10)),
+                EstimatedDeliveryDate = DateOnly.FromDateTime(DateTime.Now.AddDays(10)),
                 PaymentMethod = "Credit Card",
                 Items = new List<OrderItem>
             {
@@ -120,8 +122,8 @@ public class OrderRepository : IOrderRepository
                     Email = "jana.kovacova@email.com",
                     Address = "Krajna 45, Nitra"
                 },
-                OrderDate = DateTime.Now.AddDays(-20),
-                EstimatedDeliveryDate = DateTime.Now.AddDays(0),
+                OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(-20)),
+                EstimatedDeliveryDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(0)),
                 PaymentMethod = "Credit Card",
                 Items = new List<OrderItem>
             {
@@ -150,8 +152,8 @@ public class OrderRepository : IOrderRepository
                     Email = "stefan.rusnak@email.com",
                     Address = "Horska 11, Banska Bystrica"
                 },
-                OrderDate = DateTime.Now.AddDays(-7),
-                EstimatedDeliveryDate = DateTime.Now.AddDays(7),
+                OrderDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(-7)),
+                EstimatedDeliveryDate = DateOnly.FromDateTime(DateTimeProvider.Now.AddDays(7)),
                 PaymentMethod = "Bank Transfer",
                 Items = new List<OrderItem>
             {
