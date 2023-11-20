@@ -17,10 +17,27 @@ public class PropertyBaseTesting
     //     result.Should().Equal(expectedOutput);
     // }
 
-    // [Property(EndSize = int.MaxValue)]
-    // public Property PrimeNumberIsNotDivisibleByOtherNumbers(PositiveInt candidate)
-    // {
-    // }
+    //public void DataShouldBeSorted(int[]? data)
+    //{
+    //    var sorted = SortingAlgorithm.MergeSort(data);
+
+    //    var isSorted = IsSorted(sorted);
+    //}
+
+    //public void AlgoritmusShouldBeIdempotent(int[]? data)
+    //{
+    //    var sorted = SortingAlgorithm.MergeSort(data);
+    //    var sorted2 = SortingAlgorithm.MergeSort(sorted);
+
+    //    var areSame = (sorted is null || sorted.SequenceEqual(sorted2!));
+    //}
+
+    //public void DataShouldHaveSameSize(int[]? data)
+    //{
+    //    var sorted = SortingAlgorithm.MergeSort(data);
+
+    //    var sameSize = (sorted is null || sorted.Count() == data!.Length);
+    //}
 
     // private static bool IsPrime(int number)
     // {
@@ -73,76 +90,76 @@ public class PropertyBaseTesting
     //     return 0;
     // }
 
-    // private static bool IsSorted(IEnumerable<int>? sequence)
-    // {
-    //     if (sequence is null)
-    //     {
-    //         return true;
-    //     }
+    //private static bool IsSorted(IEnumerable<int>? sequence)
+    //{
+    //    if (sequence is null)
+    //    {
+    //        return true;
+    //    }
 
-    //     var array = sequence.ToArray();
-    //     for (int i = 0; i < array.Length - 1; i++)
-    //     {
-    //         if (array[i] > array[i + 1])
-    //         {
-    //             return false;
-    //         }
-    //     }
-    //     return true;
-    // }
+    //    var array = sequence.ToArray();
+    //    for (int i = 0; i < array.Length - 1; i++)
+    //    {
+    //        if (array[i] > array[i + 1])
+    //        {
+    //            return false;
+    //        }
+    //    }
+    //    return true;
+    //}
 
-    // public static class SortingAlgorithm
-    // {
-    //     public static IEnumerable<int>? MergeSort(IEnumerable<int>? input)
-    //     {
-    //         if (input is null)
-    //         {
-    //             return null;
-    //         }
+    //public static class SortingAlgorithm
+    //{
+    //    public static IEnumerable<int>? MergeSort(IEnumerable<int>? input)
+    //    {
+    //        if (input is null)
+    //        {
+    //            return null;
+    //        }
 
-    //         var numbers = input.ToList();
-    //         if (numbers.Count <= 1)
-    //         {
-    //             return numbers;
-    //         }
+    //        var numbers = input.ToList();
+    //        if (numbers.Count <= 1)
+    //        {
+    //            return numbers;
+    //        }
 
-    //         var middle = numbers.Count / 2;
-    //         var left = MergeSort(numbers.GetRange(0, middle))!;
-    //         var right = MergeSort(numbers.GetRange(middle, numbers.Count - middle))!;
+    //        var middle = numbers.Count / 2;
+    //        var left = MergeSort(numbers.GetRange(0, middle))!;
+    //        var right = MergeSort(numbers.GetRange(middle, numbers.Count - middle))!;
 
-    //         return Merge(left, right);
-    //     }
+    //        return Merge(left, right);
+    //    }
 
-    //     private static IEnumerable<int> Merge(IEnumerable<int> left, IEnumerable<int> right)
-    //     {
-    //         var leftEnumerator = left.GetEnumerator();
-    //         var rightEnumerator = right.GetEnumerator();
-    //         var leftHasNext = leftEnumerator.MoveNext();
-    //         var rightHasNext = rightEnumerator.MoveNext();
+    //    private static IEnumerable<int> Merge(IEnumerable<int> left, IEnumerable<int> right)
+    //    {
+    //        var leftEnumerator = left.GetEnumerator();
+    //        var rightEnumerator = right.GetEnumerator();
+    //        var leftHasNext = leftEnumerator.MoveNext();
+    //        var rightHasNext = rightEnumerator.MoveNext();
 
-    //         while (leftHasNext || rightHasNext)
-    //         {
-    //             if (!leftHasNext)
-    //             {
-    //                 yield return rightEnumerator.Current;
-    //                 rightHasNext = rightEnumerator.MoveNext();
-    //             }
-    //             else if (!rightHasNext)
-    //             {
-    //                 yield return leftEnumerator.Current;
-    //                 leftHasNext = leftEnumerator.MoveNext();
-    //             }
-    //             else if (leftEnumerator.Current < rightEnumerator.Current)
-    //             {
-    //                 yield return leftEnumerator.Current;
-    //                 leftHasNext = leftEnumerator.MoveNext();
-    //             }
-    //             else
-    //             {
-    //                 yield return rightEnumerator.Current;
-    //                 rightHasNext = rightEnumerator.MoveNext();
-    //             }
-    //         }
-    //     }
-    // }
+    //        while (leftHasNext || rightHasNext)
+    //        {
+    //            if (!leftHasNext)
+    //            {
+    //                yield return rightEnumerator.Current;
+    //                rightHasNext = rightEnumerator.MoveNext();
+    //            }
+    //            else if (!rightHasNext)
+    //            {
+    //                yield return leftEnumerator.Current;
+    //                leftHasNext = leftEnumerator.MoveNext();
+    //            }
+    //            else if (leftEnumerator.Current < rightEnumerator.Current)
+    //            {
+    //                yield return leftEnumerator.Current;
+    //                leftHasNext = leftEnumerator.MoveNext();
+    //            }
+    //            else
+    //            {
+    //                yield return rightEnumerator.Current;
+    //                rightHasNext = rightEnumerator.MoveNext();
+    //            }
+    //        }
+    //    }
+    //}
 }
