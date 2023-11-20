@@ -8,7 +8,7 @@ Add scenarious for:
 ## LivingDoc
 
 Install:
-dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI
+`dotnet tool install --global SpecFlow.Plus.LivingDoc.CLI`
 
 Generate html:
-livingdoc test-assembly tests/Kros.UnitTestsWorkshop.Gherkin.Tests/bin/Debug/net7.0/Kros.UnitTestsWorkshop.Gherkin.Tests.dll -t tests/Kros.UnitTestsWorkshop.Gherkin.Tests/bin/Debug/net7.0/TestExecution.json
+`livingdoc test-assembly tests/Kros.UnitTestsWorkshop.Gherkin.Tests/bin/Debug/net7.0/Kros.UnitTestsWorkshop.Gherkin.Tests.dll -t tests/Kros.UnitTestsWorkshop.Gherkin.Tests/bin/Debug/net7.0/TestExecution.json`
