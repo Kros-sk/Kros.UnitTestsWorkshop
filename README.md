@@ -8,7 +8,7 @@
 
 ## Only to mention
 
-- [x] [Gherkin - Ako nechať písať testovací scenár neprogramátorom?](https://github.com/ttutisani/Xunit.Gherkin.Quick)
+- [x] [Gherkin - Ako nechať písať testovací scenár neprogramátorom?](https://docs.specflow.org/projects/specflow/en/latest/Integrations/xUnit.html)
 - [x] [Squadron.SqlServer - Ako testovať integráciu s databázou?](https://swisslife-oss.github.io/squadron/docs/sqlserver)
 - [x] [WireMock.Net - Ako testovať kód závislý od externého API?](https://github.com/WireMock-Net/WireMock.Net)
 - [ ] [FluentAssertions](https://fluentassertions.com/)
