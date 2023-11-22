@@ -1,4 +1,5 @@
-﻿using Kros.UnitTestsWorkshop.EShop;
+﻿using AutoBogus;
+using Kros.UnitTestsWorkshop.EShop;
 using System.Net;
 using System.Net.Http.Json;
 
@@ -30,4 +31,3 @@ namespace Kros.UnitTestsWorkshop.Tests.EShop
         }
     }
 }
-
